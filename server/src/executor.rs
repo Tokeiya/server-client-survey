@@ -3,6 +3,7 @@ use std::sync::atomic::AtomicBool;
 use tokio::sync::mpsc::error::TryRecvError;
 use tokio::{
 	runtime::{Builder, Runtime},
+	select,
 	sync::mpsc::{Receiver, Sender},
 	sync::oneshot,
 	task::{JoinError, JoinHandle},
@@ -32,9 +33,8 @@ impl Executor {
 		Self { runtime, task }
 	}
 
-	async fn proc(value: String, id: usize) {
-		println!("{id}:{value} proceeded");
-		sleep(Duration::from_millis(500)).await;
+	async fn proc(queue: &mut VecDeque<(usize, String)>) {
+		todo!()
 	}
 
 	async fn receive_proc(
@@ -50,6 +50,14 @@ impl Executor {
 		let mut cnt = 0usize;
 
 		loop {
+			select! {
+				biased;
+
+				cmd = Self::receive_proc(&mut rx, queue, cnt) => {
+					todo!()
+				}
+
+			}
 			todo!()
 		}
 	}
