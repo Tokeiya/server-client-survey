@@ -2,7 +2,7 @@ use std::collections::VecDeque;
 use std::sync::atomic::AtomicBool;
 use tokio::sync::mpsc::error::TryRecvError;
 use tokio::{
-	runtime::{Builder, Runtime},
+	runtime::{Builder, LocalOptions, LocalRuntime, Runtime},
 	select,
 	sync::mpsc::{Receiver, Sender},
 	sync::oneshot,
@@ -10,52 +10,50 @@ use tokio::{
 	time::{Duration, sleep},
 };
 
+use super::queue::Queue;
+
 pub enum Command {
 	Value(String),
 	Dump(Sender<usize>),
 }
 
 pub struct Executor {
-	runtime: Runtime,
+	runtime: LocalRuntime,
 	task: JoinHandle<usize>,
 }
 
 impl Executor {
 	pub fn new(rx: Receiver<Command>) -> Self {
-		let runtime = Builder::new_multi_thread()
-			.worker_threads(1)
+		let runtime = Builder::new_current_thread()
 			.enable_all()
-			.build()
+			.build_local(LocalOptions::default())
 			.unwrap();
 
-		let task = runtime.spawn(Self::loop_proc(rx));
+		let task = runtime.spawn_local(Self::loop_proc(rx));
 
 		Self { runtime, task }
 	}
 
-	async fn proc(queue: &mut VecDeque<(usize, String)>) {
+	async fn proc(queue: &mut Queue<(usize, String)>) {
 		todo!()
 	}
 
 	async fn receive_proc(
 		rx: &mut Receiver<Command>,
-		queue: VecDeque<(usize, String)>,
+		queue: &Queue<(usize, String)>,
 		seed: usize,
 	) -> Result<usize, JoinError> {
 		todo!()
 	}
 
 	async fn loop_proc(mut rx: Receiver<Command>) -> usize {
-		let mut queue: VecDeque<(usize, String)> = VecDeque::new();
+		let mut queue: Queue<(usize, String)> = Queue::new();
 		let mut cnt = 0usize;
 
 		loop {
 			select! {
 				biased;
 
-				cmd = Self::receive_proc(&mut rx, queue, cnt) => {
-					todo!()
-				}
 
 			}
 			todo!()
