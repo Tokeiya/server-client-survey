@@ -19,7 +19,8 @@ fn main() {
 async fn process_loop() -> AnyResult<()> {
 	println!("enter");
 	let mut cnt = 0u64;
-	let mut signal = Box::pin(tokio::signal::ctrl_c());
+	let signal = tokio::signal::ctrl_c();
+	tokio::pin!(signal);
 
 	loop {
 		match poll!(&mut signal) {
