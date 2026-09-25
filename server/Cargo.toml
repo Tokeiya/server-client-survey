@@ -8,3 +8,5 @@ tokio = { version = "*", features = ["full"] }
 anyhow = "*"
 tokio-util = "*"
 futures = "*"
+tarpc = { version = "*", features = ["serde1", "tokio1"] }
+share_lib = { path = "../share_lib" }

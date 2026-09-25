@@ -1,0 +1,8 @@
+[package]
+name = "share_lib"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tarpc = { version = "*", features = ["tokio1", "serde1"] }
+serde = "*"

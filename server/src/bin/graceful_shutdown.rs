@@ -1,7 +1,7 @@
 use anyhow::Result as AnyResult;
-use futures::{FutureExt, poll};
+use futures::poll;
 use std::task::Poll;
-use tokio::runtime::{Builder, Runtime};
+use tokio::runtime::Builder;
 use tokio::time::{Duration, sleep};
 
 fn main() {
