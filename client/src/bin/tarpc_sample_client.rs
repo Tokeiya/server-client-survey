@@ -1,13 +1,5 @@
-use futures::StreamExt;
-use share_lib::{
-	RemoteInterface, RemoteInterfaceClient, RemoteInterfaceRequest, RemoteInterfaceResponse,
-};
-use tarpc::{
-	client, context,
-	serde_transport::unix,
-	server::{BaseChannel, Channel},
-	tokio_serde::formats::Bincode,
-};
+use share_lib::RemoteInterfaceClient;
+use tarpc::{client, context, serde_transport::unix, tokio_serde::formats::Bincode};
 
 use tokio::runtime::Builder;
 
@@ -21,12 +13,14 @@ async fn proc_main() {
 		.unwrap();
 	println!("received response: {}", response);
 
-	let response = client
-		.say_hello(context::current(), "時計屋42".to_owned())
-		.await
-		.unwrap();
-
-	println!("received response: {}", response);
+	for i in 0..usize::MAX {
+		let response = client
+			.say_hello(context::current(), format!("時計屋{}", i))
+			.await
+			.unwrap();
+		println!("received response: {}", response);
+		tokio::time::sleep(std::time::Duration::from_millis(100)).await;
+	}
 }
 fn main() {
 	println!("build runtime");
