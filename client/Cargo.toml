@@ -4,4 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-tokio = {version = "*", features = ["full"]}
+tokio = { version = "*", features = ["full"] }
+tarpc = { version = "*", features = ["serde1", "tokio1", "serde-transport-bincode", "unix"] }
+share_lib = { path = "../share_lib" }
+futures = "0.3.34"
