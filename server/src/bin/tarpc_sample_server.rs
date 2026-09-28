@@ -84,18 +84,28 @@ async fn alt_async_main() {
 						break 'server;
 					}
 
+					// _ = BaseChannel::with_defaults(tran)
+					// 	.execute(Server.serve())
+					// 	.for_each(|request| {
+					// 	println!("copy");
+					// 	let c=cnt.clone();
+					// 	return async move {
+					// 		let value=c.fetch_add(1, Ordering::Relaxed);
+					// 		println!("Processing request {:?}",value);
+					// 		tokio::spawn(request);
+					// 	};}) => {
+					// 	println!("connection closed");
+					// }
 					_ = BaseChannel::with_defaults(tran)
 						.execute(Server.serve())
-						.for_each(|request| {
+						.for_each(async |request| {
 						println!("copy");
-						let c=cnt.clone();
-						return async move {
-							let value=c.fetch_add(1, Ordering::Relaxed);
+							let value=cnt.fetch_add(1, Ordering::Relaxed);
 							println!("Processing request {:?}",value);
-							tokio::spawn(request);
-						};}) => {
+							tokio::spawn(request);}) => {
 						println!("connection closed");
 					}
+
 				}
 			}
 		}
