@@ -1,14 +1,24 @@
+use futures::stream::Next;
 use futures::{FutureExt, StreamExt};
-use share_lib::{RemoteInterface, RemoteInterfaceClient};
+use share_lib::{
+	RemoteInterface, RemoteInterfaceClient, RemoteInterfaceRequest, RemoteInterfaceResponse,
+};
+use std::io::Error;
+use std::pin::Pin;
 use std::sync::Arc;
 use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
 use tarpc::context::Context;
+use tarpc::serde_transport::Transport;
+use tarpc::serde_transport::unix::Incoming;
+use tarpc::server::TrackedRequest;
 use tarpc::{
+	ChannelError, ClientMessage, Response,
 	serde_transport::unix,
 	server::{BaseChannel, Channel},
 	tokio_serde::formats::Bincode,
 };
+use tokio::net::UnixStream;
 use tokio::{pin, select};
 
 #[derive(Debug, Clone)]
@@ -29,7 +39,7 @@ async fn async_main() {
 	loop {
 		select! {
 
-			_=tokio::signal::ctrl_c().fuse()=>{
+			_=tokio::signal::ctrl_c()=>{
 				println!("Shut down");
 				break;
 			}
@@ -67,6 +77,7 @@ async fn alt_async_main() {
 	let cnt = Arc::new(AtomicUsize::new(0));
 
 	'server: loop {
+		println!("server loop start");
 		cnt.store(0, Ordering::Relaxed);
 		select! {
 			_ = &mut token => {
@@ -75,6 +86,7 @@ async fn alt_async_main() {
 			}
 
 			transport = listener.next() => {
+				println!("new connection");
 				let tran = transport.unwrap().unwrap();
 
 
@@ -84,18 +96,6 @@ async fn alt_async_main() {
 						break 'server;
 					}
 
-					// _ = BaseChannel::with_defaults(tran)
-					// 	.execute(Server.serve())
-					// 	.for_each(|request| {
-					// 	println!("copy");
-					// 	let c=cnt.clone();
-					// 	return async move {
-					// 		let value=c.fetch_add(1, Ordering::Relaxed);
-					// 		println!("Processing request {:?}",value);
-					// 		tokio::spawn(request);
-					// 	};}) => {
-					// 	println!("connection closed");
-					// }
 					_ = BaseChannel::with_defaults(tran)
 						.execute(Server.serve())
 						.for_each(async |request| {
@@ -107,6 +107,77 @@ async fn alt_async_main() {
 					}
 
 				}
+			}
+		}
+	}
+}
+
+async fn loop_proc(
+	mut channel: BaseChannel<
+		RemoteInterfaceRequest,
+		RemoteInterfaceResponse,
+		Transport<
+			UnixStream,
+			ClientMessage<RemoteInterfaceRequest>,
+			Response<RemoteInterfaceResponse>,
+			Bincode<ClientMessage<RemoteInterfaceRequest>, Response<RemoteInterfaceResponse>>,
+		>,
+	>,
+	token: &mut Pin<&mut impl Future>,
+) -> bool {
+	loop {
+		select! {
+			_=token=>{
+				return false
+			}
+
+			item=channel.next()=>{
+				match item{
+
+				None => {return false}
+					Some(hoge) => {
+						match hoge{
+
+						Ok(piyo) => {
+								prin
+							}
+							Err(_) => {}}
+
+					}}
+
+			}
+		}
+	}
+}
+
+async fn flatten_async_main() {
+	println!("start server");
+
+	let path = unix::TempPathBuf::new("/tmp/sock");
+	let mut listener: Incoming<
+		ClientMessage<RemoteInterfaceRequest>,
+		Response<RemoteInterfaceResponse>,
+		Bincode<_, _>,
+		_,
+	> = unix::listen(&path, Bincode::default).await.unwrap();
+
+	let token = tokio::signal::ctrl_c();
+	pin!(token);
+	let cnt = Arc::new(AtomicUsize::new(0));
+
+	'server: loop {
+		cnt.store(0, Ordering::Relaxed);
+		select! {
+			_ = &mut token => {
+				println!("Shut down");
+				break 'server;
+			}
+
+			transport = listener.next() => {
+				let tran = transport.unwrap().unwrap();
+				let mut channel=BaseChannel::with_defaults(tran);
+
+
 			}
 		}
 	}
