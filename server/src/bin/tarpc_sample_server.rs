@@ -1,36 +1,30 @@
-use futures::stream::Next;
 use futures::{FutureExt, Stream, StreamExt};
-use share_lib::{
-	RemoteInterface, RemoteInterfaceClient, RemoteInterfaceRequest, RemoteInterfaceResponse,
-};
-use std::io::Error;
+use share_lib::{RemoteInterface, RemoteInterfaceRequest, RemoteInterfaceResponse};
 use std::pin::Pin;
 use std::sync::Arc;
 use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
-use std::sync::mpsc::channel;
 use tarpc::context::Context;
-use tarpc::serde_transport::Transport;
 use tarpc::serde_transport::unix::Incoming;
-use tarpc::server::TrackedRequest;
 use tarpc::{
-	ChannelError, ClientMessage, Response,
+	ClientMessage, Response,
 	serde_transport::unix,
 	server::{BaseChannel, Channel},
 	tokio_serde::formats::Bincode,
 };
-use tokio::net::UnixStream;
 use tokio::{pin, select};
 
 #[derive(Debug, Clone)]
 struct Server;
 
 impl RemoteInterface for Server {
-	async fn say_hello(self, context: Context, name: String) -> String {
+	async fn say_hello(self, _context: Context, name: String) -> String {
 		println!("Hello {name}");
 		format!("Hello, {}!", name)
 	}
 }
+
+#[allow(dead_code)]
 
 async fn async_main() {
 	println!("start server");
@@ -66,6 +60,8 @@ async fn async_main() {
 
 	println!("end server");
 }
+
+#[allow(dead_code)]
 
 async fn alt_async_main() {
 	println!("start server");
@@ -112,6 +108,8 @@ async fn alt_async_main() {
 		}
 	}
 }
+
+#[allow(dead_code)]
 
 async fn loop_proc<S, F>(channel: S)
 where
@@ -179,6 +177,9 @@ async fn flatten_async_alt_main() {
 		}
 	}
 }
+
+#[allow(dead_code)]
+
 async fn flatten_async_main() {
 	println!("flatten start server");
 
