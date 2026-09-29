@@ -1,6 +1,7 @@
 use futures::{Stream, StreamExt};
 use server::Server;
 use share_lib::{RemoteInterface, RemoteInterfaceRequest, RemoteInterfaceResponse};
+use std::pin::Pin;
 use std::sync::Arc;
 use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
@@ -13,20 +14,17 @@ use tarpc::{
 };
 use tokio::{pin, select};
 
-async fn loop_proc<S, F>(channel: S)
+async fn loop_proc_alt<S, F>(mut channel: Pin<&mut S>)
 where
 	S: Stream<Item = F>,
 	F: Future<Output = ()> + Send + 'static,
 {
-	tokio::pin!(channel);
-
 	while let Some(request) = channel.next().await {
-		println!("copy");
 		tokio::spawn(request);
 	}
 }
 
-async fn flatten_async_main() {
+async fn flatten_async_alt_main() {
 	println!("flatten start server");
 
 	let path = unix::TempPathBuf::new("/tmp/sock");
@@ -41,27 +39,30 @@ async fn flatten_async_main() {
 	pin!(token);
 	let cnt = Arc::new(AtomicUsize::new(0));
 
-	loop {
+	'server: loop {
 		cnt.store(0, Ordering::Relaxed);
 		select! {
 			_ = &mut token => {
 				println!("Shut down");
-				break;
+				break 'server;
 			}
 
 			transport = listener.next() => {
 				let tran = transport.unwrap().unwrap();
 				let stream=BaseChannel::with_defaults(tran).execute(Server.serve());
+				pin!(stream);
 				select! {
 					_=&mut token => {
 						println!("Shut down");
-						break;
+						break 'server;
 					}
 
-					_=loop_proc(stream)=>{
+					_=loop_proc_alt(stream)=>{
 						println!("Completed");
 					}
 				}
+
+
 			}
 		}
 	}
@@ -72,5 +73,5 @@ fn main() {
 		.enable_all()
 		.build()
 		.unwrap()
-		.block_on(flatten_async_main());
+		.block_on(flatten_async_alt_main());
 }
