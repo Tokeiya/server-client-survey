@@ -1,4 +1,5 @@
 use futures::{FutureExt, Stream, StreamExt};
+use server::Server;
 use share_lib::{RemoteInterface, RemoteInterfaceRequest, RemoteInterfaceResponse};
 use std::pin::Pin;
 use std::sync::Arc;
@@ -14,18 +15,7 @@ use tarpc::{
 };
 use tokio::{pin, select};
 
-#[derive(Debug, Clone)]
-struct Server;
-
-impl RemoteInterface for Server {
-	async fn say_hello(self, _context: Context, name: String) -> String {
-		println!("Hello {name}");
-		format!("Hello, {}!", name)
-	}
-}
-
 #[allow(dead_code)]
-
 async fn async_main() {
 	println!("start server");
 	let path = unix::TempPathBuf::new("/tmp/sock");
@@ -110,7 +100,6 @@ async fn alt_async_main() {
 }
 
 #[allow(dead_code)]
-
 async fn loop_proc<S, F>(channel: S)
 where
 	S: Stream<Item = F>,
@@ -179,7 +168,6 @@ async fn flatten_async_alt_main() {
 }
 
 #[allow(dead_code)]
-
 async fn flatten_async_main() {
 	println!("flatten start server");
 
