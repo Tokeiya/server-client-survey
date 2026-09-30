@@ -6,7 +6,7 @@ edition = "2024"
 [dependencies]
 tokio = { version = "*", features = ["full"] }
 anyhow = "*"
-tokio-util = "*"
 futures = "*"
 tarpc = { version = "*", features = ["serde1", "tokio1", "serde-transport-bincode", "unix"] }
 share_lib = { path = "../share_lib" }
+serde = { version = "*", features = ["derive"] }

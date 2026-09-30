@@ -1,12 +1,10 @@
-use futures::{FutureExt, Stream, StreamExt};
+use futures::StreamExt;
 use server::Server;
-use share_lib::{RemoteInterface, RemoteInterfaceRequest, RemoteInterfaceResponse};
+use share_lib::RemoteInterface;
 use std::sync::Arc;
 use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
-use tarpc::serde_transport::unix::Incoming;
 use tarpc::{
-	ClientMessage, Response,
 	serde_transport::unix,
 	server::{BaseChannel, Channel},
 	tokio_serde::formats::Bincode,

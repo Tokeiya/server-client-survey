@@ -460,10 +460,10 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "futures",
+ "serde",
  "share_lib",
  "tarpc",
  "tokio",
- "tokio-util",
 ]
 
 [[package]]

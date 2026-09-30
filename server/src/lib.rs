@@ -1,4 +1,4 @@
-mod server;
+mod command;
 
 use share_lib::RemoteInterface;
 use tarpc::context::Context;
