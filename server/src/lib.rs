@@ -1,4 +1,5 @@
 mod command;
+pub mod single_observable_channel;
 
 use share_lib::RemoteInterface;
 use tarpc::context::Context;
