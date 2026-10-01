@@ -4,6 +4,11 @@ use std::collections::VecDeque;
 use std::rc::Rc;
 use tokio::sync::Notify;
 
+pub fn create_channel<T>() -> (Sender<T>, Receiver<T>) {
+	let channel = Rc::new(ObservableChannel::new());
+	(Sender::new(Rc::clone(&channel)), Receiver::new(channel))
+}
+
 struct ObservableChannel<T> {
 	storage: RefCell<VecDeque<T>>,
 	notify: Notify,
@@ -33,7 +38,7 @@ impl<T> ObservableChannel<T> {
 
 			if let Some(value) = value {
 				return Some(value);
-			} else if self.sender_count.get() == 0 {
+			} else if self.sender_count() == 0 {
 				return None;
 			}
 
@@ -63,7 +68,7 @@ impl<T> ObservableChannel<T> {
 	}
 }
 
-struct Receiver<T> {
+pub struct Receiver<T> {
 	observable_channel: Rc<ObservableChannel<T>>,
 }
 
@@ -72,7 +77,7 @@ impl<T> Receiver<T> {
 		Self { observable_channel }
 	}
 
-	async fn dequeue(&self) -> Option<T> {
+	pub async fn dequeue(&self) -> Option<T> {
 		self.observable_channel.dequeue().await
 	}
 
@@ -85,7 +90,7 @@ impl<T> Receiver<T> {
 	}
 }
 
-struct Sender<T> {
+pub struct Sender<T> {
 	observable_channel: Rc<ObservableChannel<T>>,
 }
 
@@ -95,7 +100,7 @@ impl<T> Sender<T> {
 		Self { observable_channel }
 	}
 
-	fn enqueue(&self, value: T) {
+	pub fn enqueue(&self, value: T) {
 		self.observable_channel.enqueue(value);
 	}
 }
