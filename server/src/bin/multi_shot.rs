@@ -51,6 +51,7 @@ impl Handle {
 			let waker = state.waker.as_mut().unwrap();
 			println!("wake by ref!");
 			waker.wake_by_ref();
+			waker.wake_by_ref();
 		}
 	}
 }
