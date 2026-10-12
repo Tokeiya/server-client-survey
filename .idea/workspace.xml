@@ -21,9 +21,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/bin/count.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/server-client-survey.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/server-client-survey.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playground/src/bin/atomic.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/bin/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,61 +53,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000074879384144" />
-      <entry key="S5" value="1.008907275917969" />
-      <entry key="S10" value="1.0943783657305473" />
-      <entry key="S30" value="1.4553111140934039" />
-      <entry key="S60" value="1.6940712510534628" />
-      <entry key="M2" value="2.755304032694788" />
-      <entry key="M5" value="16.078379594027798" />
-      <entry key="M10" value="49.79185713755124" />
-      <entry key="M15" value="79.06489732541394" />
-      <entry key="M30" value="131.36807057486286" />
-      <entry key="H1" value="172.15916856663878" />
-      <entry key="H2" value="197.86802139261223" />
-      <entry key="H4" value="212.33318533310023" />
-      <entry key="D1" value="225.30099346148782" />
-      <entry key="W1" value="227.61221547032963" />
+      <entry key="MS100" value="1.396520699745635" />
+      <entry key="MS500" value="2.9123208985191154" />
+      <entry key="S2" value="7.900492428713474" />
+      <entry key="S5" value="12.679699898747794" />
+      <entry key="S10" value="15.376997625909889" />
+      <entry key="S30" value="17.6695463971376" />
+      <entry key="S60" value="18.33423384990977" />
+      <entry key="M2" value="18.79545772321935" />
+      <entry key="M5" value="21.856434635279008" />
+      <entry key="M10" value="39.68173241045321" />
+      <entry key="M15" value="64.78322277185582" />
+      <entry key="M30" value="131.22760617555616" />
+      <entry key="H1" value="202.30233316449542" />
+      <entry key="H2" value="255.7796221525929" />
+      <entry key="H4" value="288.81956740971464" />
+      <entry key="D1" value="320.2448865316275" />
+      <entry key="W1" value="326.02490123573034" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="5.072436929465086E-74" />
-      <entry key="MS500" value="2.1930237304231383E-15" />
-      <entry key="S2" value="2.1640178202999685E-4" />
-      <entry key="S5" value="0.03420616081133304" />
-      <entry key="S10" value="0.18494907626515206" />
-      <entry key="S30" value="0.5697517290218628" />
-      <entry key="S60" value="0.7598638571213183" />
-      <entry key="M2" value="1.1762004638443804" />
-      <entry key="M5" value="5.6471825648621605" />
-      <entry key="M10" value="14.815075694078825" />
-      <entry key="M15" value="21.764741259551403" />
-      <entry key="M30" value="33.2372400625634" />
-      <entry key="H1" value="41.7347314613443" />
-      <entry key="H2" value="46.96376729166289" />
-      <entry key="H4" value="49.872635493754004" />
-      <entry key="D1" value="52.46282944911852" />
-      <entry key="W1" value="52.922860425923595" />
+      <entry key="MS100" value="5.4124218064496525E-24" />
+      <entry key="MS500" value="2.2216637405381564E-5" />
+      <entry key="S2" value="0.06865459060695961" />
+      <entry key="S5" value="0.3425057230756407" />
+      <entry key="S10" value="0.5852398851228436" />
+      <entry key="S30" value="0.8370562620958469" />
+      <entry key="S60" value="0.9491315134642253" />
+      <entry key="M2" value="1.22421519961852" />
+      <entry key="M5" value="2.889091262404388" />
+      <entry key="M10" value="9.726122422783732" />
+      <entry key="M15" value="18.03958545258752" />
+      <entry key="M30" value="37.536292235970414" />
+      <entry key="H1" value="56.61094913948807" />
+      <entry key="H2" value="70.31457838999492" />
+      <entry key="H4" value="78.58733628679308" />
+      <entry key="D1" value="86.34500480620098" />
+      <entry key="W1" value="87.76136157631184" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="8.222861186924383E-5" />
-      <entry key="MS500" value="0.15240688675953865" />
-      <entry key="S2" value="0.6249851432445686" />
-      <entry key="S5" value="0.8669321654016168" />
-      <entry key="S10" value="1.1732392756948697" />
-      <entry key="S30" value="1.9731487426597185" />
-      <entry key="S60" value="2.423385006635698" />
-      <entry key="M2" value="3.910837608231448" />
-      <entry key="M5" value="21.687322831801488" />
-      <entry key="M10" value="64.54893154166996" />
-      <entry key="M15" value="100.76912129294875" />
-      <entry key="M30" value="164.55603032026593" />
-      <entry key="H1" value="213.86198635523252" />
-      <entry key="H2" value="244.81356271443605" />
-      <entry key="H4" value="262.1960726863415" />
-      <entry key="D1" value="277.76210361183666" />
-      <entry key="W1" value="280.5348278772112" />
+      <entry key="MS100" value="1.2375414098550366" />
+      <entry key="MS500" value="2.8468318269306065" />
+      <entry key="S2" value="7.912189634745482" />
+      <entry key="S5" value="12.964362080112004" />
+      <entry key="S10" value="15.918942685738354" />
+      <entry key="S30" value="18.487292069496227" />
+      <entry key="S60" value="19.272487059522636" />
+      <entry key="M2" value="20.012335448842283" />
+      <entry key="M5" value="24.733528587953295" />
+      <entry key="M10" value="49.37788494249775" />
+      <entry key="M15" value="82.78169712505581" />
+      <entry key="M30" value="168.71672085640827" />
+      <entry key="H1" value="258.8759425118488" />
+      <entry key="H2" value="326.0704486641869" />
+      <entry key="H4" value="367.3934717508036" />
+      <entry key="D1" value="406.58740736029796" />
+      <entry key="W1" value="413.78590153048225" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -137,16 +137,24 @@
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/repo/server-client-survey",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
     "org.rust.first.attach.projects": "true",
     "settings.editor.selected.configurable": "settings.sync",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/playground/src/bin" />
+    </key>
+  </component>
   <component name="RunManager" selected="Cargo.Run count">
     <configuration name="Run cmd_channel" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin cmd_channel" />
@@ -269,6 +277,15 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Cargo.Run cmd_channel" />
+      <item itemvalue="Cargo.Run tarpc_sample_client" />
+      <item itemvalue="Cargo.Test server-client-survey" />
+      <item itemvalue="Cargo.Run playground" />
+      <item itemvalue="Cargo.Run count" />
+      <item itemvalue="Cargo.Test single_observable_channel::tests::observing_does_not_consume_values" />
+      <item itemvalue="Cargo.Test single_observable_channel::tests" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Run count" />
