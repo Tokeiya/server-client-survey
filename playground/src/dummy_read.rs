@@ -28,20 +28,44 @@ impl<T: FusedIterator<Item = Duration> + Unpin> AsyncRead for DummyRead<T> {
 		cx: &mut Context<'_>,
 		buf: &mut ReadBuf<'_>,
 	) -> Poll<std::io::Result<()>> {
-		let mut this = self.get_mut();
-		let mut flg = false;
+		let this = self.get_mut();
+		
+		fn fill(buffer:&mut ReadBuf<'_>, source:&mut LoopIterator)->Poll<std::io::Result<()>> {
+			if buffer.remaining() > 0 {
+				let datum: [u8; 1] = [source.next()];
+				buffer.put_slice(&datum);
+				Poll::Ready(Ok(()))
+			}else {
+				Poll::Ready(Ok(()))
+			}
+		}
 
 		match this.sleep.as_mut() {
 			Some(slp) => match slp.as_mut().poll(cx) {
 				Poll::Ready(_) => {
-					todo!()
+					
+					match this.duration.next() {
+						Some(d) => {
+							let dead_line=Instant::now()+d;
+							slp.as_mut().reset(dead_line);
+						}
+						None => {
+							_=this.sleep.take();
+						}
+					};
+					
+					fill(buf,&mut this.source)
+					
 				}
 				Poll::Pending => Poll::Pending,
 			},
 			None => {
-				let datum: [u8; 1] = [this.source.next()];
-				buf.put_slice(&datum);
-				Poll::Ready(Ok(()))
+				
+				if buf.remaining() == 0 {
+					Poll::Ready(Ok(()))
+				}else {
+					fill(buf,&mut this.source)
+				}
 			}
 		}
 	}

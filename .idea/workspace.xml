@@ -20,9 +20,8 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Add `loop_iterator.rs` module with reusable looping iterator implementation">
+    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/src/bin/poll_in_poll.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/bin/poll_in_poll.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playground/src/dummy_read.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/dummy_read.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,9 +29,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/mnt/wsl/repo/server-client-survey" value="3KgNb52JDVieTdcWAnUzKmJOnsC" />
+    </persistenceIdMap>
+  </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="35" />
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+    <option name="cachedIndexableFilesCount" value="27" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
   <component name="FileTemplateManagerImpl">
@@ -42,11 +45,9 @@
       </list>
     </option>
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="eqCxC1Ft" />
@@ -57,61 +58,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4302568731362783E-24" />
-      <entry key="MS500" value="1.7024830973864725E-5" />
-      <entry key="S2" value="0.06451048591300594" />
-      <entry key="S5" value="0.3734273049049281" />
-      <entry key="S10" value="0.9196734910325475" />
-      <entry key="S30" value="4.462405944691921" />
-      <entry key="S60" value="9.747323462399029" />
-      <entry key="M2" value="17.28925655795219" />
-      <entry key="M5" value="31.136463695473612" />
-      <entry key="M10" value="50.57905541561302" />
-      <entry key="M15" value="69.8923643515647" />
-      <entry key="M30" value="129.8762111731807" />
-      <entry key="H1" value="236.28815173490247" />
-      <entry key="H2" value="373.25323778614086" />
-      <entry key="H4" value="527.0978440878728" />
-      <entry key="D1" value="818.0854915222538" />
-      <entry key="W1" value="900.7914826050013" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000001632684026" />
+      <entry key="S10" value="1.0008386190555452" />
+      <entry key="S30" value="1.3667177683128853" />
+      <entry key="S60" value="3.1464102804166125" />
+      <entry key="M2" value="6.607827011683933" />
+      <entry key="M5" value="12.941106227508937" />
+      <entry key="M10" value="25.78510371024794" />
+      <entry key="M15" value="44.05092637170798" />
+      <entry key="M30" value="97.13280139077071" />
+      <entry key="H1" value="157.80533089071426" />
+      <entry key="H2" value="204.9324749515355" />
+      <entry key="H4" value="234.49580043146176" />
+      <entry key="D1" value="262.871250776213" />
+      <entry key="W1" value="268.11471238723885" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000193953710961" />
-      <entry key="S2" value="1.1180115733194276" />
-      <entry key="S5" value="1.426413323880041" />
-      <entry key="S10" value="1.6984850163780365" />
-      <entry key="S30" value="2.8400203963455377" />
-      <entry key="S60" value="5.0367947133703455" />
-      <entry key="M2" value="8.976836550449455" />
-      <entry key="M5" value="16.843555263731062" />
-      <entry key="M10" value="26.49630853204166" />
-      <entry key="M15" value="35.19779623514206" />
-      <entry key="M30" value="60.23917614160322" />
-      <entry key="H1" value="102.48298972424958" />
-      <entry key="H2" value="154.41697156876373" />
-      <entry key="H4" value="207.84662333463544" />
-      <entry key="D1" value="299.57370176624323" />
-      <entry key="W1" value="324.46054933737037" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.780955649824958E-73" />
+      <entry key="S2" value="7.842441094082499E-19" />
+      <entry key="S5" value="5.8782942345686076E-8" />
+      <entry key="S10" value="2.8014635211940514E-4" />
+      <entry key="S30" value="0.10806370513410704" />
+      <entry key="S60" value="0.5432163016515565" />
+      <entry key="M2" value="1.2724874291112516" />
+      <entry key="M5" value="2.670218990524415" />
+      <entry key="M10" value="6.55211260748425" />
+      <entry key="M15" value="11.879009157329367" />
+      <entry key="M30" value="25.971071112430202" />
+      <entry key="H1" value="40.94886943261358" />
+      <entry key="H2" value="52.15265056852621" />
+      <entry key="H4" value="59.05014968256744" />
+      <entry key="D1" value="65.5949939719771" />
+      <entry key="W1" value="66.79722704439554" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.018198962288569622" />
-      <entry key="MS500" value="0.44878273100665833" />
-      <entry key="S2" value="0.9370575556210321" />
-      <entry key="S5" value="1.60221954271997" />
-      <entry key="S10" value="2.4605691983696794" />
-      <entry key="S30" value="7.1660845905909225" />
-      <entry key="S60" value="14.631778639197647" />
-      <entry key="M2" value="26.114120196897062" />
-      <entry key="M5" value="47.863457927244966" />
-      <entry key="M10" value="76.98063828562634" />
-      <entry key="M15" value="105.00308396185325" />
-      <entry key="M30" value="190.0385061153505" />
-      <entry key="H1" value="338.70752425779125" />
-      <entry key="H2" value="527.6237095054121" />
-      <entry key="H4" value="734.9134494995506" />
-      <entry key="D1" value="1117.6516660251848" />
-      <entry key="W1" value="1225.250862237175" />
+      <entry key="MS100" value="2.8081898517604803E-5" />
+      <entry key="MS500" value="0.12293775925328101" />
+      <entry key="S2" value="0.5921358059268162" />
+      <entry key="S5" value="0.8109024841710298" />
+      <entry key="S10" value="0.9015271103035891" />
+      <entry key="S30" value="1.4279635055708348" />
+      <entry key="S60" value="3.6392464135983773" />
+      <entry key="M2" value="7.831202786044379" />
+      <entry key="M5" value="15.57502011175281" />
+      <entry key="M10" value="32.301710221220006" />
+      <entry key="M15" value="55.8906866871027" />
+      <entry key="M30" value="123.06286814312061" />
+      <entry key="H1" value="198.72194398321295" />
+      <entry key="H2" value="257.06451885647556" />
+      <entry key="H4" value="293.5342552197019" />
+      <entry key="D1" value="328.4640742590183" />
+      <entry key="W1" value="334.91162353599185" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -119,6 +120,21 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="3K5xuBtDrVFodPTH871WHqmkWhl" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -126,7 +142,6 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Cargo.Run count.executor&quot;: &quot;Run&quot;,
-    &quot;Cargo.Run poll_in_poll.executor&quot;: &quot;Run&quot;,
     &quot;Cargo.Test single_observable_channel::tests.executor&quot;: &quot;Coverage&quot;,
     &quot;Cargo.Test single_observable_channel::tests::observing_does_not_consume_values.executor&quot;: &quot;Coverage&quot;,
     &quot;CidrDebugProfileConversion&quot;: &quot;true&quot;,
@@ -136,33 +151,25 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;initial__devel&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/repo/server-client-survey&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
     &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
     &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/playground/src/bin" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Cargo.Run poll_in_poll">
+  <component name="RunManager" selected="Cargo.Run count">
     <configuration name="Run cmd_channel" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin cmd_channel" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -200,23 +207,6 @@
     </configuration>
     <configuration name="Run playground" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package playground --bin playground" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <envs />
-      <option name="emulateTerminal" value="true" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Run poll_in_poll" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="run --package playground --bin poll_in_poll" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
       <option name="emulateTerminal" value="true" />
@@ -301,19 +291,8 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Cargo.Run cmd_channel" />
-      <item itemvalue="Cargo.Run tarpc_sample_client" />
-      <item itemvalue="Cargo.Test server-client-survey" />
-      <item itemvalue="Cargo.Run playground" />
-      <item itemvalue="Cargo.Run poll_in_poll" />
-      <item itemvalue="Cargo.Run count" />
-      <item itemvalue="Cargo.Test single_observable_channel::tests::observing_does_not_consume_values" />
-      <item itemvalue="Cargo.Test single_observable_channel::tests" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo.Run poll_in_poll" />
         <item itemvalue="Cargo.Run count" />
         <item itemvalue="Cargo.Test single_observable_channel::tests::observing_does_not_consume_values" />
         <item itemvalue="Cargo.Test single_observable_channel::tests" />
@@ -335,13 +314,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Introduce `atomic.rs` and update workspace configuration files." />
-    <MESSAGE value="Refactor: Remove `cmd_dispatcher.rs`, add `dummy_read.rs` module, and introduce `dummy_load.rs` for testing async I/O" />
-    <MESSAGE value="**Add `poll_in_poll.rs` example to demonstrate custom future behavior**" />
-    <MESSAGE value="Add `loop_iterator.rs` module with reusable looping iterator implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `loop_iterator.rs` module with reusable looping iterator implementation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

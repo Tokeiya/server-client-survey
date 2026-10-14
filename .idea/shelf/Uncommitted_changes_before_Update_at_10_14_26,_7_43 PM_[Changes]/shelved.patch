@@ -1,0 +1,146 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"ALL\" />\n  </component>\n  <component name=\"CargoProjects\">\n    <cargoProject FILE=\"$PROJECT_DIR$/Cargo.toml\">\n      <package file=\"$PROJECT_DIR$/client\">\n        <feature name=\"default\" enabled=\"true\" />\n      </package>\n      <package file=\"$PROJECT_DIR$/playground\">\n        <feature name=\"default\" enabled=\"true\" />\n      </package>\n      <package file=\"$PROJECT_DIR$/server\">\n        <feature name=\"default\" enabled=\"true\" />\n      </package>\n      <package file=\"$PROJECT_DIR$/share_lib\">\n        <feature name=\"default\" enabled=\"true\" />\n      </package>\n    </cargoProject>\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"e9f0446c-bfcc-4748-8f01-e5cf837cd9ed\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/server/src/bin/count.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/.gitignore\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/server-client-survey.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/server-client-survey.iml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"EmbeddingIndexingInfo\">\n    <option name=\"cachedIndexableFilesCount\" value=\"27\" />\n  </component>\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"RsBuildProfile:dev\" />\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Rust File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MacroExpansionManager\">\n    <option name=\"directoryName\" value=\"eqCxC1Ft\" />\n  </component>\n  <component name=\"McpProjectServerCommands\">\n    <commands />\n    <urls />\n  </component>\n  <component name=\"NextEditCompletionFeaturesState\">\n    <decayedCancelled>\n      <entry key=\"MS100\" value=\"1.0\" />\n      <entry key=\"MS500\" value=\"1.0\" />\n      <entry key=\"S2\" value=\"1.0000074879384144\" />\n      <entry key=\"S5\" value=\"1.008907275917969\" />\n      <entry key=\"S10\" value=\"1.0943783657305473\" />\n      <entry key=\"S30\" value=\"1.4553111140934039\" />\n      <entry key=\"S60\" value=\"1.6940712510534628\" />\n      <entry key=\"M2\" value=\"2.755304032694788\" />\n      <entry key=\"M5\" value=\"16.078379594027798\" />\n      <entry key=\"M10\" value=\"49.79185713755124\" />\n      <entry key=\"M15\" value=\"79.06489732541394\" />\n      <entry key=\"M30\" value=\"131.36807057486286\" />\n      <entry key=\"H1\" value=\"172.15916856663878\" />\n      <entry key=\"H2\" value=\"197.86802139261223\" />\n      <entry key=\"H4\" value=\"212.33318533310023\" />\n      <entry key=\"D1\" value=\"225.30099346148782\" />\n      <entry key=\"W1\" value=\"227.61221547032963\" />\n    </decayedCancelled>\n    <decayedSelected>\n      <entry key=\"MS100\" value=\"5.072436929465086E-74\" />\n      <entry key=\"MS500\" value=\"2.1930237304231383E-15\" />\n      <entry key=\"S2\" value=\"2.1640178202999685E-4\" />\n      <entry key=\"S5\" value=\"0.03420616081133304\" />\n      <entry key=\"S10\" value=\"0.18494907626515206\" />\n      <entry key=\"S30\" value=\"0.5697517290218628\" />\n      <entry key=\"S60\" value=\"0.7598638571213183\" />\n      <entry key=\"M2\" value=\"1.1762004638443804\" />\n      <entry key=\"M5\" value=\"5.6471825648621605\" />\n      <entry key=\"M10\" value=\"14.815075694078825\" />\n      <entry key=\"M15\" value=\"21.764741259551403\" />\n      <entry key=\"M30\" value=\"33.2372400625634\" />\n      <entry key=\"H1\" value=\"41.7347314613443\" />\n      <entry key=\"H2\" value=\"46.96376729166289\" />\n      <entry key=\"H4\" value=\"49.872635493754004\" />\n      <entry key=\"D1\" value=\"52.46282944911852\" />\n      <entry key=\"W1\" value=\"52.922860425923595\" />\n    </decayedSelected>\n    <decayedShown>\n      <entry key=\"MS100\" value=\"8.222861186924383E-5\" />\n      <entry key=\"MS500\" value=\"0.15240688675953865\" />\n      <entry key=\"S2\" value=\"0.6249851432445686\" />\n      <entry key=\"S5\" value=\"0.8669321654016168\" />\n      <entry key=\"S10\" value=\"1.1732392756948697\" />\n      <entry key=\"S30\" value=\"1.9731487426597185\" />\n      <entry key=\"S60\" value=\"2.423385006635698\" />\n      <entry key=\"M2\" value=\"3.910837608231448\" />\n      <entry key=\"M5\" value=\"21.687322831801488\" />\n      <entry key=\"M10\" value=\"64.54893154166996\" />\n      <entry key=\"M15\" value=\"100.76912129294875\" />\n      <entry key=\"M30\" value=\"164.55603032026593\" />\n      <entry key=\"H1\" value=\"213.86198635523252\" />\n      <entry key=\"H2\" value=\"244.81356271443605\" />\n      <entry key=\"H4\" value=\"262.1960726863415\" />\n      <entry key=\"D1\" value=\"277.76210361183666\" />\n      <entry key=\"W1\" value=\"280.5348278772112\" />\n    </decayedShown>\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;customColor&quot;: &quot;&quot;,\n  &quot;associatedIndex&quot;: 2\n}</component>\n  <component name=\"ProjectId\" id=\"3K5xuBtDrVFodPTH871WHqmkWhl\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Cargo.Run count.executor\": \"Run\",\n    \"Cargo.Test single_observable_channel::tests.executor\": \"Coverage\",\n    \"Cargo.Test single_observable_channel::tests::observing_does_not_consume_values.executor\": \"Coverage\",\n    \"CidrDebugProfileConversion\": \"true\",\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\n    \"RunOnceActivity.MCP Project settings loaded\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"RunOnceActivity.rust.reset.selective.auto.import\": \"true\",\n    \"RunOnceActivity.typescript.service.memoryLimit.init\": \"true\",\n    \"codeWithMe.voiceChat.enabledByDefault\": \"false\",\n    \"com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1\": \"true\",\n    \"git-widget-placeholder\": \"initial__devel\",\n    \"junie.onboarding.icon.badge.shown\": \"true\",\n    \"last_opened_file_path\": \"/repo/server-client-survey\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"org.rust.cargo.project.model.PROJECT_DISCOVERY\": \"true\",\n    \"org.rust.first.attach.projects\": \"true\",\n    \"settings.editor.selected.configurable\": \"settings.sync\",\n    \"to.speed.mode.migration.done\": \"true\"\n  }\n}]]></component>\n  <component name=\"RunManager\" selected=\"Cargo.Run count\">\n    <configuration name=\"Run cmd_channel\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\">\n      <option name=\"command\" value=\"run --package server --bin cmd_channel\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Run count\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\" temporary=\"true\">\n      <option name=\"buildProfileId\" value=\"dev\" />\n      <option name=\"command\" value=\"run --package server --bin count\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Run playground\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\">\n      <option name=\"command\" value=\"run --package playground --bin playground\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Run tarpc_sample_client\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\">\n      <option name=\"command\" value=\"run --package client --bin tarpc_sample_client\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Test server-client-survey\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\">\n      <option name=\"buildProfileId\" value=\"test\" />\n      <option name=\"command\" value=\"test --workspace\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Test single_observable_channel::tests\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\" temporary=\"true\">\n      <option name=\"command\" value=\"test --package server --lib -- single_observable_channel::tests\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Test single_observable_channel::tests::observing_does_not_consume_values\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\" temporary=\"true\">\n      <option name=\"command\" value=\"test --package server --lib -- single_observable_channel::tests::observing_does_not_consume_values --exact\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Cargo.Run count\" />\n        <item itemvalue=\"Cargo.Test single_observable_channel::tests::observing_does_not_consume_values\" />\n        <item itemvalue=\"Cargo.Test single_observable_channel::tests\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"RustProjectSettings\">\n    <option name=\"toolchainHomeDirectory\" value=\"$USER_HOME$/.cargo/bin\" />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"e9f0446c-bfcc-4748-8f01-e5cf837cd9ed\" name=\"Changes\" comment=\"\" />\n      <created>1790861452248</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1790861452248</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/server_client_survey$Test_single_observable_channel__tests.info\" NAME=\"Test single_observable_channel::tests Coverage Results\" MODIFIED=\"1790862028300\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"RsCoverageRunner\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" CONTEXT_FILE_PATH=\"$PROJECT_DIR$\" />\n    <SUITE FILE_PATH=\"coverage/server_client_survey$Test_single_observable_channel__tests__observing_does_not_consume_values.info\" NAME=\"Test single_observable_channel::tests::observing_does_not_consume_values Coverage Results\" MODIFIED=\"1790862036464\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"RsCoverageRunner\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" CONTEXT_FILE_PATH=\"$PROJECT_DIR$\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d875fd4bfe72f46e15b9c0a14882fc3bb906ee99)
++++ b/.idea/workspace.xml	(date 1791974636655)
+@@ -20,10 +20,8 @@
+     </cargoProject>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/server/src/bin/count.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/server-client-survey.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/server-client-survey.iml" afterDir="false" />
++    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Add IntelliJ IDEA config files and implement `count.rs` example binary for testing async behavior.">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -33,7 +31,7 @@
+   <component name="EmbeddingIndexingInfo">
+     <option name="cachedIndexableFilesCount" value="27" />
+   </component>
+-  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
++  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+@@ -119,35 +117,36 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Cargo.Run count.executor": "Run",
+-    "Cargo.Test single_observable_channel::tests.executor": "Coverage",
+-    "Cargo.Test single_observable_channel::tests::observing_does_not_consume_values.executor": "Coverage",
+-    "CidrDebugProfileConversion": "true",
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "RunOnceActivity.MCP Project settings loaded": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+-    "codeWithMe.voiceChat.enabledByDefault": "false",
+-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+-    "git-widget-placeholder": "initial__devel",
+-    "junie.onboarding.icon.badge.shown": "true",
+-    "last_opened_file_path": "/repo/server-client-survey",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+-    "org.rust.first.attach.projects": "true",
+-    "settings.editor.selected.configurable": "settings.sync",
+-    "to.speed.mode.migration.done": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Cargo.Install cargo-llvm-cov.executor&quot;: &quot;Run&quot;,
++    &quot;Cargo.Run count.executor&quot;: &quot;Run&quot;,
++    &quot;Cargo.Test single_observable_channel::tests.executor&quot;: &quot;Coverage&quot;,
++    &quot;Cargo.Test single_observable_channel::tests::observing_does_not_consume_values.executor&quot;: &quot;Coverage&quot;,
++    &quot;CidrDebugProfileConversion&quot;: &quot;true&quot;,
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
++    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
++    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;initial__devel&quot;,
++    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/mnt/wsl/repo/server-client-survey&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
++    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;,
++    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+   }
+-}]]></component>
+-  <component name="RunManager" selected="Cargo.Run count">
++}</component>
++  <component name="RunManager" selected="Cargo.Test single_observable_channel::tests">
+     <configuration name="Run cmd_channel" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+       <option name="command" value="run --package server --bin cmd_channel" />
+       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+@@ -236,6 +235,7 @@
+       </method>
+     </configuration>
+     <configuration name="Test single_observable_channel::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
++      <option name="buildProfileId" value="test" />
+       <option name="command" value="test --package server --lib -- single_observable_channel::tests" />
+       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+       <envs />
+@@ -271,9 +271,9 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Cargo.Test single_observable_channel::tests" />
+         <item itemvalue="Cargo.Run count" />
+         <item itemvalue="Cargo.Test single_observable_channel::tests::observing_does_not_consume_values" />
+-        <item itemvalue="Cargo.Test single_observable_channel::tests" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -293,12 +293,27 @@
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Add IntelliJ IDEA config files and implement `count.rs` example binary for testing async behavior." />
++    <option name="LAST_COMMIT_MESSAGE" value="Add IntelliJ IDEA config files and implement `count.rs` example binary for testing async behavior." />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
++          <url>file://$PROJECT_DIR$/server/src/single_observable_channel.rs</url>
++          <line>118</line>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++  </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+     <select />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/server_client_survey$Test_single_observable_channel__tests.info" NAME="Test single_observable_channel::tests Coverage Results" MODIFIED="1790862028300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="$PROJECT_DIR$" />
+     <SUITE FILE_PATH="coverage/server_client_survey$Test_single_observable_channel__tests__observing_does_not_consume_values.info" NAME="Test single_observable_channel::tests::observing_does_not_consume_values Coverage Results" MODIFIED="1790862036464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/server_client_survey$Test_single_observable_channel__tests.info" NAME="Test single_observable_channel::tests Coverage Results" MODIFIED="1791724268661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
