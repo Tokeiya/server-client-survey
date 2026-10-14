@@ -1,2 +1,2 @@
 pub mod dummy_read;
-pub mod loop_iterator;
+mod loop_iterator;

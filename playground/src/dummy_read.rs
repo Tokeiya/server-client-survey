@@ -1,6 +1,5 @@
-use super::loop_iterator::LoopIterator;
+pub use super::loop_iterator::LoopIterator;
 use std::iter::FusedIterator;
-use std::ops::DerefMut;
 use std::pin::Pin;
 use std::task::{Context, Poll};
 use tokio::io::{AsyncRead, ReadBuf};
@@ -53,9 +52,7 @@ impl<T: FusedIterator<Item = Duration> + Unpin> AsyncRead for DummyRead<T> {
 							_=this.sleep.take();
 						}
 					};
-					
 					fill(buf,&mut this.source)
-					
 				}
 				Poll::Pending => Poll::Pending,
 			},
@@ -68,5 +65,35 @@ impl<T: FusedIterator<Item = Duration> + Unpin> AsyncRead for DummyRead<T> {
 				}
 			}
 		}
+	}
+}
+
+#[cfg(test)]
+mod test {
+	use tokio::io::AsyncReadExt;
+	use super::*;
+	
+	struct Delay;
+	
+	impl Iterator for Delay {
+		type Item = Duration;
+		
+		fn next(&mut self) -> Option<Self::Item> {
+			Some(Duration::from_millis(500))
+		}
+	}
+	
+	impl FusedIterator for Delay {}
+	
+	#[tokio::test]
+	async fn test_dummy_read() {
+		let iter = LoopIterator::new((b'a'..=b'z').collect());
+		let delay = Delay;
+		let mut dummy_read = DummyRead::new(iter, delay);
+		
+		let mut buffer = [0u8; 10];
+		dummy_read.read_exact(&mut buffer).await.unwrap();
+		assert_eq!(&buffer, b"abcdefghij");
+		
 	}
 }
