@@ -1,5 +1,6 @@
 use playground::dummy_read::*;
 use std::iter::FusedIterator;
+use std::sync::Mutex;
 use tokio::io::AsyncReadExt;
 use tokio::{
 	runtime::Builder,
@@ -51,10 +52,10 @@ async fn worst_proc() {
 
 async fn proc() {
 	let mut dummy = DummyRead::new(LoopIterator::new((1..=255).collect()), Durations);
-	let mut buff: [u8; 10] = [0; 10];
+	let mut buff: Mutex<[u8; 10]> = Mutex::new([0; 10]);
 
 	for i in 0..10 {
-		let fut = dummy.read_exact(&mut buff);
+		let fut = dummy.read_exact(buff.lock().unwrap().as_mut());
 		tokio::pin!(fut);
 
 		loop {

@@ -20,11 +20,8 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Add IntelliJ IDEA configuration files and implement changes to `count.rs` for testing async functionality.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Implement async reading logic in `main.rs` with timeouts and add tests for `DummyRead`">
       <change beforePath="$PROJECT_DIR$/playground/src/bin/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/bin/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/src/dummy_read.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/dummy_read.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,61 +60,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000026469906" />
-      <entry key="S5" value="1.0003715602028733" />
-      <entry key="S10" value="1.0205370007742294" />
-      <entry key="S30" value="1.5234317113445393" />
-      <entry key="S60" value="2.7074903414409173" />
-      <entry key="M2" value="5.370275700786934" />
-      <entry key="M5" value="12.622521889329896" />
-      <entry key="M10" value="23.46652129730012" />
-      <entry key="M15" value="37.03627485253321" />
-      <entry key="M30" value="86.89270565658404" />
-      <entry key="H1" value="174.3705625549234" />
-      <entry key="H2" value="269.9821182974626" />
-      <entry key="H4" value="343.6929901420098" />
-      <entry key="D1" value="425.0272220430796" />
-      <entry key="W1" value="441.228079740531" />
+      <entry key="MS100" value="3.219047360763903E-19" />
+      <entry key="MS500" value="2.0023754035378E-4" />
+      <entry key="S2" value="0.12086375040278884" />
+      <entry key="S5" value="0.5152265272582884" />
+      <entry key="S10" value="1.055426116415405" />
+      <entry key="S30" value="2.4237062629102804" />
+      <entry key="S60" value="4.222622254936547" />
+      <entry key="M2" value="7.863443216307093" />
+      <entry key="M5" value="16.721258234410662" />
+      <entry key="M10" value="28.757082239038315" />
+      <entry key="M15" value="42.12206505674817" />
+      <entry key="M30" value="90.51394362178517" />
+      <entry key="H1" value="178.00618373037173" />
+      <entry key="H2" value="276.3758115875052" />
+      <entry key="H4" value="353.55806235801396" />
+      <entry key="D1" value="439.75830650227994" />
+      <entry key="W1" value="457.0397707892061" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.95910494028826E-262" />
-      <entry key="MS500" value="4.9457490176974855E-53" />
-      <entry key="S2" value="8.386061023673159E-14" />
-      <entry key="S5" value="5.880621228450941E-6" />
-      <entry key="S10" value="0.0024250000733061555" />
-      <entry key="S30" value="0.13586890442116853" />
-      <entry key="S60" value="0.42692421684986837" />
-      <entry key="M2" value="1.0703880398912622" />
-      <entry key="M5" value="2.842009603008402" />
-      <entry key="M10" value="5.333524503515558" />
-      <entry key="M15" value="8.4202234391837" />
-      <entry key="M30" value="20.134306814451943" />
-      <entry key="H1" value="41.05045973003251" />
-      <entry key="H2" value="63.85364577342268" />
-      <entry key="H4" value="81.33741882846245" />
-      <entry key="D1" value="100.53503888161825" />
-      <entry key="W1" value="104.34796871032447" />
+      <entry key="MS100" value="1.0002708909843956" />
+      <entry key="MS500" value="1.19476859785183" />
+      <entry key="S2" value="1.8565439437169964" />
+      <entry key="S5" value="2.45688357663255" />
+      <entry key="S10" value="2.943965900255491" />
+      <entry key="S30" value="3.5475803812800235" />
+      <entry key="S60" value="3.8372460693216004" />
+      <entry key="M2" value="4.279672832987888" />
+      <entry key="M5" value="5.765729997366204" />
+      <entry key="M10" value="8.23980976230353" />
+      <entry key="M15" value="11.174116804060839" />
+      <entry key="M30" value="22.391980734208705" />
+      <entry key="H1" value="43.20555381926495" />
+      <entry key="H2" value="66.61517933631795" />
+      <entry key="H4" value="84.90240235963606" />
+      <entry key="D1" value="105.23771036106403" />
+      <entry key="W1" value="109.30383741900737" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.4728954709368154E-11" />
-      <entry key="MS500" value="0.008513688376666629" />
-      <entry key="S2" value="0.3037592004069832" />
-      <entry key="S5" value="0.6212500534232509" />
-      <entry key="S10" value="0.810374664076208" />
-      <entry key="S30" value="1.5753905926540284" />
-      <entry key="S60" value="3.0835531031449803" />
-      <entry key="M2" value="6.4066295724135705" />
-      <entry key="M5" value="15.440826592758398" />
-      <entry key="M10" value="28.779252919059207" />
-      <entry key="M15" value="45.43439895923479" />
-      <entry key="M30" value="106.9993846436532" />
-      <entry key="H1" value="215.3917227257152" />
-      <entry key="H2" value="333.8124564310643" />
-      <entry key="H4" value="425.0153926041023" />
-      <entry key="D1" value="525.5591378325092" />
-      <entry key="W1" value="545.575584620034" />
+      <entry key="MS100" value="0.0015645896046923198" />
+      <entry key="MS500" value="0.27702527793495024" />
+      <entry key="S2" value="1.171334028417151" />
+      <entry key="S5" value="2.420366475340595" />
+      <entry key="S10" value="3.632796907439773" />
+      <entry key="S30" value="5.802727612576677" />
+      <entry key="S60" value="7.95747222524638" />
+      <entry key="M2" value="12.076034875393676" />
+      <entry key="M5" value="22.44545582326406" />
+      <entry key="M10" value="36.96604945402388" />
+      <entry key="M15" value="53.26763780421815" />
+      <entry key="M30" value="112.87578141483078" />
+      <entry key="H1" value="221.18130249947274" />
+      <entry key="H2" value="342.96691087725776" />
+      <entry key="H4" value="438.4449169716149" />
+      <entry key="D1" value="544.9927700761467" />
+      <entry key="W1" value="566.3431255781943" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -367,14 +364,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add IntelliJ IDEA configuration files and implement changes to `count.rs` for testing async functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add IntelliJ IDEA configuration files and implement changes to `count.rs` for testing async functionality." />
+    <MESSAGE value="Implement async reading logic in `main.rs` with timeouts and add tests for `DummyRead`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement async reading logic in `main.rs` with timeouts and add tests for `DummyRead`" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/playground/src/bin/main.rs</url>
-          <line>81</line>
+          <line>82</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
