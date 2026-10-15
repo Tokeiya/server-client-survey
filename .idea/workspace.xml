@@ -20,12 +20,7 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Add `randomized_dummy_read.rs` module for improved test utilities and update dependencies">
-      <change afterPath="$PROJECT_DIR$/playground/src/bin/playground.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playground/src/sample_gen.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/lib.rs" afterDir="false" />
-    </list>
+    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Add `sample_gen.rs` module and `playground.rs` example for RNG testing." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -384,7 +379,8 @@
     <MESSAGE value="Implement async reading logic in `main.rs` with timeouts and add tests for `DummyRead`" />
     <MESSAGE value="Update `.idea/workspace.xml` for refined `DummyRead` implementation" />
     <MESSAGE value="Add `randomized_dummy_read.rs` module for improved test utilities and update dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `randomized_dummy_read.rs` module for improved test utilities and update dependencies" />
+    <MESSAGE value="Add `sample_gen.rs` module and `playground.rs` example for RNG testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add `sample_gen.rs` module and `playground.rs` example for RNG testing." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
