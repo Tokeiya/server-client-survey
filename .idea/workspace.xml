@@ -20,11 +20,10 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Update `.idea/workspace.xml` for refined `DummyRead` implementation">
-      <change afterPath="$PROJECT_DIR$/playground/src/randomized_dummy_read.rs" afterDir="false" />
+    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Add `randomized_dummy_read.rs` module for improved test utilities and update dependencies">
+      <change afterPath="$PROJECT_DIR$/playground/src/bin/playground.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playground/src/sample_gen.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/playground/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/src/bin/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/bin/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playground/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,60 +65,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000033831722" />
-      <entry key="S10" value="1.0000585904209185" />
-      <entry key="S30" value="1.059520049768339" />
-      <entry key="S60" value="1.5557061697351657" />
-      <entry key="M2" value="3.383987182127181" />
-      <entry key="M5" value="8.63222921050061" />
-      <entry key="M10" value="15.083847312184204" />
-      <entry key="M15" value="22.53924483110995" />
-      <entry key="M30" value="55.625335225045994" />
-      <entry key="H1" value="134.50486483522926" />
-      <entry key="H2" value="243.37157678840939" />
-      <entry key="H4" value="339.9351434239151" />
-      <entry key="D1" value="457.1879793414393" />
-      <entry key="W1" value="481.7578064468396" />
+      <entry key="MS500" value="1.0000731805030574" />
+      <entry key="S2" value="1.2473373093134847" />
+      <entry key="S5" value="2.5785739170657402" />
+      <entry key="S10" value="4.635464134043926" />
+      <entry key="S30" value="10.182333839758002" />
+      <entry key="S60" value="15.965342703028144" />
+      <entry key="M2" value="25.347920979530397" />
+      <entry key="M5" value="42.03487851724727" />
+      <entry key="M10" value="55.86081956552479" />
+      <entry key="M15" value="66.01698266736216" />
+      <entry key="M30" value="100.27620615297671" />
+      <entry key="H1" value="178.61191178162667" />
+      <entry key="H2" value="289.36777543161634" />
+      <entry key="H4" value="389.6651094714879" />
+      <entry key="D1" value="513.3468967834677" />
+      <entry key="W1" value="539.4808822426695" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.024860515117341202" />
-      <entry key="MS500" value="0.47764146819121867" />
-      <entry key="S2" value="0.8313339300577625" />
-      <entry key="S5" value="0.9287872245785299" />
-      <entry key="S10" value="0.967321336673943" />
-      <entry key="S30" value="1.1649552256518525" />
-      <entry key="S60" value="1.7285606932991995" />
-      <entry key="M2" value="2.958112540750275" />
-      <entry key="M5" value="5.430228811199931" />
-      <entry key="M10" value="8.319129593419852" />
-      <entry key="M15" value="11.08350356655145" />
-      <entry key="M30" value="20.624284535806364" />
-      <entry key="H1" value="40.75181776696001" />
-      <entry key="H2" value="67.53270158198556" />
-      <entry key="H4" value="90.93831289071831" />
-      <entry key="D1" value="119.10911120828888" />
-      <entry key="W1" value="124.98608410461009" />
+      <entry key="MS100" value="4.1793182019241513E-38" />
+      <entry key="MS500" value="3.343725698084313E-8" />
+      <entry key="S2" value="0.01444996871997986" />
+      <entry key="S5" value="0.24724665602970344" />
+      <entry key="S10" value="0.841291471534187" />
+      <entry key="S30" value="3.2360377284789577" />
+      <entry key="S60" value="5.579497464690864" />
+      <entry key="M2" value="8.160812505903557" />
+      <entry key="M5" value="12.250140439312709" />
+      <entry key="M10" value="16.389016777100377" />
+      <entry key="M15" value="19.70387130552283" />
+      <entry key="M30" value="29.653670713923763" />
+      <entry key="H1" value="49.90851875972251" />
+      <entry key="H2" value="77.36134789006854" />
+      <entry key="H4" value="101.80119195211597" />
+      <entry key="D1" value="131.6414824143617" />
+      <entry key="W1" value="137.91594523094042" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.031034140657641145" />
-      <entry key="MS500" value="0.5104945888411483" />
-      <entry key="S2" value="1.16582776397703" />
-      <entry key="S5" value="1.5709907139489323" />
-      <entry key="S10" value="1.7680544817232473" />
-      <entry key="S30" value="2.1457072450811583" />
-      <entry key="S60" value="3.2254442174949123" />
-      <entry key="M2" value="6.289080337183183" />
-      <entry key="M5" value="14.022653343504766" />
-      <entry key="M10" value="23.37320077783352" />
-      <entry key="M15" value="33.59647505377206" />
-      <entry key="M30" value="76.22426569290961" />
-      <entry key="H1" value="175.22988909099445" />
-      <entry key="H2" value="310.88106538453667" />
-      <entry key="H4" value="430.85747182294017" />
-      <entry key="D1" value="576.2935375955743" />
-      <entry key="W1" value="606.7433563392393" />
+      <entry key="MS100" value="0.2161343078269663" />
+      <entry key="MS500" value="0.7361738067164864" />
+      <entry key="S2" value="1.1630911050692" />
+      <entry key="S5" value="2.665478618895697" />
+      <entry key="S10" value="5.267919518497151" />
+      <entry key="S30" value="13.220867842937238" />
+      <entry key="S60" value="21.380097338743127" />
+      <entry key="M2" value="33.374472948526254" />
+      <entry key="M5" value="54.19262410332257" />
+      <entry key="M10" value="72.18597440625572" />
+      <entry key="M15" value="85.66965774170248" />
+      <entry key="M30" value="129.8912620494899" />
+      <entry key="H1" value="228.48696078020873" />
+      <entry key="H2" value="366.7023680148517" />
+      <entry key="H4" value="491.44836921336054" />
+      <entry key="D1" value="644.9844520211134" />
+      <entry key="W1" value="677.3962380856304" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -149,40 +148,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cargo.Run count.executor&quot;: &quot;Run&quot;,
-    &quot;Cargo.Run main.executor&quot;: &quot;Run&quot;,
-    &quot;Cargo.Test dummy_read::test::test_dummy_read.executor&quot;: &quot;Run&quot;,
-    &quot;Cargo.Test single_observable_channel::tests.executor&quot;: &quot;Coverage&quot;,
-    &quot;Cargo.Test single_observable_channel::tests::observing_does_not_consume_values.executor&quot;: &quot;Coverage&quot;,
-    &quot;CidrDebugProfileConversion&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;initial__devel&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/repo/server-client-survey&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cargo.Run count.executor": "Run",
+    "Cargo.Run main.executor": "Run",
+    "Cargo.Test dummy_read::test::test_dummy_read.executor": "Run",
+    "Cargo.Test single_observable_channel::tests.executor": "Coverage",
+    "Cargo.Test single_observable_channel::tests::observing_does_not_consume_values.executor": "Coverage",
+    "CidrDebugProfileConversion": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "code.cleanup.on.save": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "initial__devel",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/repo/server-client-survey",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.first.attach.projects": "true",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Cargo.Run main">
     <configuration name="Run cmd_channel" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin cmd_channel" />
@@ -381,7 +382,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add IntelliJ IDEA configuration files and implement changes to `count.rs` for testing async functionality." />
     <MESSAGE value="Implement async reading logic in `main.rs` with timeouts and add tests for `DummyRead`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement async reading logic in `main.rs` with timeouts and add tests for `DummyRead`" />
+    <MESSAGE value="Update `.idea/workspace.xml` for refined `DummyRead` implementation" />
+    <MESSAGE value="Add `randomized_dummy_read.rs` module for improved test utilities and update dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add `randomized_dummy_read.rs` module for improved test utilities and update dependencies" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
