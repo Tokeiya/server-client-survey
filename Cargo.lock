@@ -359,6 +359,7 @@ name = "playground"
 version = "0.1.0"
 dependencies = [
  "futures",
+ "rand_core",
  "tokio",
 ]
 

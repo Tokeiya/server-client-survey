@@ -50,12 +50,39 @@ async fn worst_proc() {
 	}
 }
 
-async fn proc() {
+async fn mutex_proc() {
 	let mut dummy = DummyRead::new(LoopIterator::new((1..=255).collect()), Durations);
-	let mut buff: Mutex<[u8; 10]> = Mutex::new([0; 10]);
+	let buff = Mutex::new([0; 10]);
 
 	for i in 0..10 {
-		let fut = dummy.read_exact(buff.lock().unwrap().as_mut());
+		let mut guard = buff.lock().unwrap();
+
+		let fut = dummy.read_exact(guard.as_mut());
+		tokio::pin!(fut);
+
+		loop {
+			select! {
+				result = &mut fut => {
+					println!("{i} read done");
+					println!("result:{:?}", result);
+					println!("{:?}",guard.as_slice());
+					guard.fill(0);
+					break;
+				}
+				_ = sleep(Duration::from_secs(5)) => {
+					println!("{i} timeout");
+				}
+			}
+		}
+	}
+}
+
+async fn proc() {
+	let mut dummy = DummyRead::new(LoopIterator::new((1..=255).collect()), Durations);
+	let mut buff: [u8; 10] = [0; 10];
+
+	for i in 0..10 {
+		let fut = dummy.read_exact(buff.as_mut());
 		tokio::pin!(fut);
 
 		loop {
@@ -72,8 +99,11 @@ async fn proc() {
 				}
 				_ = sleep(Duration::from_secs(5)) => {
 					println!("{i} timeout");
+
 				}
 			}
+
+			println!();
 		}
 
 		println!();
@@ -87,5 +117,5 @@ fn main() {
 		.build()
 		.unwrap();
 
-	runtime.block_on(proc());
+	runtime.block_on(mutex_proc());
 }

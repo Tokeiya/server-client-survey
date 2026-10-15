@@ -6,3 +6,4 @@ edition = "2024"
 [dependencies]
 tokio = { version = "*", features = ["full"] }
 futures = "*"
+rand_core = "*"
