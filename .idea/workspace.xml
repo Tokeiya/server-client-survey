@@ -20,7 +20,12 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Implement async read logic in `main.rs` with mutex-based buffering and update `.idea` configuration files" />
+    <list default="true" id="e9f0446c-bfcc-4748-8f01-e5cf837cd9ed" name="Changes" comment="Implement async read logic in `main.rs` with mutex-based buffering and update `.idea` configuration files">
+      <change afterPath="$PROJECT_DIR$/playground/src/datum.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground/src/bin/playground.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/bin/playground.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/lib.rs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,10 +37,10 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="37" />
+    <option name="cachedIndexableFilesCount" value="40" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -59,61 +64,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000731805030574" />
-      <entry key="S2" value="1.2473373093134847" />
-      <entry key="S5" value="2.5785739170657402" />
-      <entry key="S10" value="4.635464134043926" />
-      <entry key="S30" value="10.182333839758002" />
-      <entry key="S60" value="15.965342703028144" />
-      <entry key="M2" value="25.347920979530397" />
-      <entry key="M5" value="42.03487851724727" />
-      <entry key="M10" value="55.86081956552479" />
-      <entry key="M15" value="66.01698266736216" />
-      <entry key="M30" value="100.27620615297671" />
-      <entry key="H1" value="178.61191178162667" />
-      <entry key="H2" value="289.36777543161634" />
-      <entry key="H4" value="389.6651094714879" />
-      <entry key="D1" value="513.3468967834677" />
-      <entry key="W1" value="539.4808822426695" />
+      <entry key="MS100" value="1.0001321947684785" />
+      <entry key="MS500" value="1.2908215507844396" />
+      <entry key="S2" value="2.2348410941050307" />
+      <entry key="S5" value="2.649196814641006" />
+      <entry key="S10" value="2.830308474945806" />
+      <entry key="S30" value="3.5360693202340046" />
+      <entry key="S60" value="4.516760580090523" />
+      <entry key="M2" value="5.923331073598709" />
+      <entry key="M5" value="18.049182813741446" />
+      <entry key="M10" value="52.84302764649265" />
+      <entry key="M15" value="88.55393904846277" />
+      <entry key="M30" value="175.93580811612466" />
+      <entry key="H1" value="299.9532134795325" />
+      <entry key="H2" value="456.79521130100056" />
+      <entry key="H4" value="604.830007964218" />
+      <entry key="D1" value="799.6043360330497" />
+      <entry key="W1" value="842.5181412318125" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="4.1793182019241513E-38" />
-      <entry key="MS500" value="3.343725698084313E-8" />
-      <entry key="S2" value="0.01444996871997986" />
-      <entry key="S5" value="0.24724665602970344" />
-      <entry key="S10" value="0.841291471534187" />
-      <entry key="S30" value="3.2360377284789577" />
-      <entry key="S60" value="5.579497464690864" />
-      <entry key="M2" value="8.160812505903557" />
-      <entry key="M5" value="12.250140439312709" />
-      <entry key="M10" value="16.389016777100377" />
-      <entry key="M15" value="19.70387130552283" />
-      <entry key="M30" value="29.653670713923763" />
-      <entry key="H1" value="49.90851875972251" />
-      <entry key="H2" value="77.36134789006854" />
-      <entry key="H4" value="101.80119195211597" />
-      <entry key="D1" value="131.6414824143617" />
-      <entry key="W1" value="137.91594523094042" />
+      <entry key="MS100" value="7.098021524137545E-175" />
+      <entry key="MS500" value="1.5499795657501109E-35" />
+      <entry key="S2" value="2.887433283349576E-9" />
+      <entry key="S5" value="6.351373578374417E-4" />
+      <entry key="S10" value="0.046814581774024644" />
+      <entry key="S30" value="0.9964740957621188" />
+      <entry key="S60" value="2.215870385869606" />
+      <entry key="M2" value="3.393048009979527" />
+      <entry key="M5" value="6.302252160042152" />
+      <entry key="M10" value="13.138483637760292" />
+      <entry key="M15" value="19.981837292710935" />
+      <entry key="M30" value="37.20515438961058" />
+      <entry key="H1" value="63.941624233702456" />
+      <entry key="H2" value="99.8290865191774" />
+      <entry key="H4" value="134.3790326772908" />
+      <entry key="D1" value="180.1388767210887" />
+      <entry key="W1" value="190.23879242648732" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.2161343078269663" />
-      <entry key="MS500" value="0.7361738067164864" />
-      <entry key="S2" value="1.1630911050692" />
-      <entry key="S5" value="2.665478618895697" />
-      <entry key="S10" value="5.267919518497151" />
-      <entry key="S30" value="13.220867842937238" />
-      <entry key="S60" value="21.380097338743127" />
-      <entry key="M2" value="33.374472948526254" />
-      <entry key="M5" value="54.19262410332257" />
-      <entry key="M10" value="72.18597440625572" />
-      <entry key="M15" value="85.66965774170248" />
-      <entry key="M30" value="129.8912620494899" />
-      <entry key="H1" value="228.48696078020873" />
-      <entry key="H2" value="366.7023680148517" />
-      <entry key="H4" value="491.44836921336054" />
-      <entry key="D1" value="644.9844520211134" />
-      <entry key="W1" value="677.3962380856304" />
+      <entry key="MS100" value="0.18181837067241605" />
+      <entry key="MS500" value="0.9349875342377014" />
+      <entry key="S2" value="2.064016090319397" />
+      <entry key="S5" value="2.566276767454758" />
+      <entry key="S10" value="2.8283519445869922" />
+      <entry key="S30" value="4.4882886775035855" />
+      <entry key="S60" value="6.692497499158821" />
+      <entry key="M2" value="9.285444788611297" />
+      <entry key="M5" value="24.30809012741044" />
+      <entry key="M10" value="65.91585599856731" />
+      <entry key="M15" value="108.46253224268547" />
+      <entry key="M30" value="213.0691895488316" />
+      <entry key="H1" value="363.83495915883884" />
+      <entry key="H2" value="556.5796182842128" />
+      <entry key="H4" value="739.1798231145045" />
+      <entry key="D1" value="979.7368423158873" />
+      <entry key="W1" value="1032.7559764444957" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -143,41 +148,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cargo.Run count.executor&quot;: &quot;Run&quot;,
-    &quot;Cargo.Run main.executor&quot;: &quot;Run&quot;,
-    &quot;Cargo.Test dummy_read::test::test_dummy_read.executor&quot;: &quot;Run&quot;,
-    &quot;Cargo.Test single_observable_channel::tests.executor&quot;: &quot;Coverage&quot;,
-    &quot;Cargo.Test single_observable_channel::tests::observing_does_not_consume_values.executor&quot;: &quot;Coverage&quot;,
-    &quot;CidrDebugProfileConversion&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;initial__devel&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/repo/server-client-survey&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cargo.Run count.executor": "Run",
+    "Cargo.Run main.executor": "Run",
+    "Cargo.Test datum::tests::foo.executor": "Run",
+    "Cargo.Test dummy_read::test::test_dummy_read.executor": "Run",
+    "Cargo.Test single_observable_channel::tests.executor": "Coverage",
+    "Cargo.Test single_observable_channel::tests::observing_does_not_consume_values.executor": "Coverage",
+    "CidrDebugProfileConversion": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "code.cleanup.on.save": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "initial__devel",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/repo/server-client-survey",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.first.attach.projects": "true",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
-  <component name="RunManager" selected="Cargo.Run main">
+}]]></component>
+  <component name="RunManager" selected="Cargo.Test datum::tests::foo">
     <configuration name="Run cmd_channel" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin cmd_channel" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -265,6 +271,24 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test datum::tests::foo" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="buildProfileId" value="test" />
+      <option name="command" value="test --package playground --lib -- datum::tests::foo --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test dummy_read::test::test_dummy_read" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="buildProfileId" value="test" />
       <option name="command" value="test --package playground --lib -- dummy_read::test::test_dummy_read --exact" />
@@ -286,23 +310,6 @@
     <configuration name="Test server-client-survey" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="buildProfileId" value="test" />
       <option name="command" value="test --workspace" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <envs />
-      <option name="emulateTerminal" value="true" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test single_observable_channel::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package server --lib -- single_observable_channel::tests" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
       <option name="emulateTerminal" value="true" />
@@ -340,19 +347,19 @@
       <item itemvalue="Cargo.Run playground" />
       <item itemvalue="Cargo.Run tarpc_sample_client" />
       <item itemvalue="Cargo.Test server-client-survey" />
+      <item itemvalue="Cargo.Test datum::tests::foo" />
       <item itemvalue="Cargo.Run count" />
       <item itemvalue="Cargo.Run main" />
       <item itemvalue="Cargo.Test dummy_read::test::test_dummy_read" />
-      <item itemvalue="Cargo.Test single_observable_channel::tests" />
       <item itemvalue="Cargo.Test single_observable_channel::tests::observing_does_not_consume_values" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Test datum::tests::foo" />
         <item itemvalue="Cargo.Run main" />
         <item itemvalue="Cargo.Test dummy_read::test::test_dummy_read" />
         <item itemvalue="Cargo.Run count" />
         <item itemvalue="Cargo.Test single_observable_channel::tests::observing_does_not_consume_values" />
-        <item itemvalue="Cargo.Test single_observable_channel::tests" />
       </list>
     </recent_temporary>
   </component>
