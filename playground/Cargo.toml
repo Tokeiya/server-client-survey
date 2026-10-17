@@ -8,3 +8,4 @@ tokio = { version = "*", features = ["full"] }
 futures = "*"
 rand_core = "*"
 rand = "*"
+rand_distr = "*"

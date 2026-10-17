@@ -1,7 +1,7 @@
 #[derive(Clone, Copy)]
-struct Output([u8; 4], u8);
+pub struct Datum([u8; 4], u8);
 
-impl Output {
+impl Datum {
 	pub fn new(scr: char) -> Self {
 		let mut buff = [0u8; 4];
 		let len = scr.encode_utf8(&mut buff).len();
@@ -22,11 +22,11 @@ mod test {
 	use super::*;
 	#[test]
 	fn new() {
-		let fixture = Output::new('a');
+		let fixture = Datum::new('a');
 		assert_eq!(fixture.1, 1);
 		assert_eq!(fixture.0, [b'a', 0, 0, 0]);
 
-		let fixture = Output::new('🥺');
+		let fixture = Datum::new('🥺');
 		let mut buf = [0u8; 4];
 		let expected = '🥺'.encode_utf8(&mut buf).as_bytes();
 		assert_eq!(fixture.1, 4);
@@ -35,11 +35,11 @@ mod test {
 
 	#[test]
 	fn datum() {
-		let fixture = Output::new('a');
+		let fixture = Datum::new('a');
 		assert_eq!(fixture.datum(), &[b'a']);
 		assert_eq!(fixture.datum().iter().len(), 1);
 
-		let fixture = Output::new('🥺');
+		let fixture = Datum::new('🥺');
 		let mut buf = [0u8; 4];
 		let expected = '🥺'.encode_utf8(&mut buf).as_bytes();
 		assert_eq!(fixture.datum(), expected);
@@ -48,10 +48,10 @@ mod test {
 
 	#[test]
 	fn len() {
-		let fixture = Output::new('a');
+		let fixture = Datum::new('a');
 		assert_eq!(fixture.len(), 1);
 
-		let fixture = Output::new('🥺');
+		let fixture = Datum::new('🥺');
 		assert_eq!(fixture.len(), 4);
 	}
 }
